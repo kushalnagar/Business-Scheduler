@@ -1,0 +1,202 @@
+body {
+	height: 100%;
+	padding: 	5px;
+	margin: 	0;
+}
+#header {
+	font: 13px arial;
+}
+#header h2 {
+	color: #2276BB;
+	text-align : center;
+}
+#header a {
+	color: #000;
+	text-decoration: none;
+}
+#header a:hover {
+	text-decoration: underline;
+}
+#messages {
+	font: 12px arial;
+	padding: 10px;
+}
+#messages.success {
+	color: green;
+}
+#messages.loading {
+	color: orange;
+}
+#messages.notification {
+	color: #000;
+}
+#messages.error {
+	color: red;
+}
+#views {
+    position:relative;
+	top:0px;
+	font: 14px arial;
+	padding: 10px;
+	float: right;
+}
+
+#views span{
+ 
+ background-color: #ECE9D8;
+ margin : 5px;
+ padding : 5px;
+ 
+}
+#views span.selected{
+   
+  background-color: gray;
+
+}
+
+#container {
+	position: relative;
+	margin: 0px auto;
+	width: 1300px;
+}
+
+#popup {
+    display: none;
+    background: white;
+	visibility: visible;
+	position: absolute;
+	left: 1250px;
+	top: 10px;
+	width: 280px;
+	height: 200px;
+	z-index: 10000;
+	border : 1px gray solid;
+	font: 13px arial;	
+}
+#popup .mask {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	filter:alpha(opacity=80);
+	-moz-opacity:0.8;
+	-khtml-opacity: 0.8;
+	opacity: 0.8;
+	margin: 0px auto;
+}
+
+#popup .resource_name {
+    visibility: visible;
+	font: 13px arial;	
+	font-weight:bold;
+	background: #fff;
+	width: 200px;
+	height: 20px;
+	top: 10%;
+	margin: 0px auto;
+	position: relative;
+	z-index: 10001;
+}
+
+
+#popup .activity_displayname {
+    visibility: visible;
+	font: 13px arial;	
+	background: #fff;
+	width: 200px;
+	height: 20px;
+	top: 15%;
+	margin: 0px auto;
+	position: relative;
+	z-index: 10001;
+}
+#popup .activity_type_div {
+    background: #fff;
+	width: 200px;
+	height: 20px;
+	top: 20%;
+	margin: 0px auto;
+	position: relative;
+	z-index: 10001;
+}
+#popup .activity_type_div label{
+    background: #fff;
+	font: 12px arial;
+	width: 50px;
+	height: 20px;
+	top: 2px;
+	margin: 0px auto;
+	position: relative;
+	z-index: 10001;
+	margin-right:10px;
+}
+#popup .activity_type_div select{
+    background: #fff;
+	font: 12px arial;
+	width: 100px;
+	height: 20px;
+	top: 2px;
+	margin: 0px auto;
+	position: relative;
+	z-index: 10001;
+}
+#popup .activity_timeperiod {
+    background: #fff;
+	width: 255px;
+	height: 20px;
+	top: 25%;
+	margin: 0px auto;
+	position: relative;
+	z-index: 10001;
+	left: 10px
+	
+}
+
+#popup .activity_timeperiod input{
+	width: 45px;
+	height: 14px;
+	top: 2px;
+	margin: 0px auto;
+	position: relative;
+	z-index: 10001;
+	margin-right: 5px;
+	font: 10px arial
+}
+#popup .activity_timeperiod label{
+	width: 50px;
+	font: 12px arial;
+	height: 20px;
+	top: 2px;
+	margin-left:5px;
+    margin-right:5px;	
+	position: relative;
+	z-index: 10001;
+}
+
+#close_popup{
+    height:15px;
+	width:15px;
+	position: relative;
+	left:265px;
+	top:4px;
+	z-index: 10001;
+	background:url('../img/combined_v19.png'); ;
+	background-position:0 -50px
+}
+#popup .save_changes {
+    background: #fff;
+	width: 100px;
+	height: 20px;
+	top: 35%;
+	margin: 0px auto;
+	position: relative;
+	z-index: 10001;
+	text-align:center;
+}
+
+#popup .save_changes button{
+    height: 20px;
+
+}

@@ -1,0 +1,234 @@
+ <scheduler>
+	       <configuration>
+		        <colors>
+			         <activity type="General" color="#FF8000"/>
+			         <activity type="Free" color="#00FF00"/>
+			         <activity type="Runaway" color="#2E9AFE"/>
+			         <activity type="Programmed" color="#FAAC58"/>
+			         <activity type="Tentamen" color="#FF0000"/>
+		        </colors>
+	       </configuration>
+    <resources>
+     <resource>
+			 <id>1</id>
+			 <displayName>Kevin</displayName>
+           <activities>
+              <activity>
+				     <id>1</id>
+					 <displayName>Project manager</displayName>
+					 <type>Runaway</type>
+					 <date start="2/14/2011 08:00:09" end="2/14/2011 10:00:09" />
+					 <lastUpdate>01 Jul 2010 10:52:34</lastUpdate>
+                </activity>
+                  <activity>
+					 <id>2</id>
+					 <displayName>Lunchen</displayName>
+					 <type>Free</type>
+					 <date start="2/14/2011 10:00:09" end="2/14/2011 11:00:09" />
+					 <lastUpdate>01 Jul 2010 14:34:40</lastUpdate>
+                </activity>
+                  <activity>
+					 <id>10</id>
+					 <displayName>Voetbal kijken</displayName>
+					 <type>Programmed</type>
+					 <date start="2/14/2011 12:09:09" end="2/14/2011 13:30:09" />
+					 <lastUpdate>01 Jul 2010 14:29:16</lastUpdate>
+                </activity>
+              </activities>
+         </resource>
+        <resource>
+              <id>2</id>
+			 <displayName>Robin</displayName>
+           <activities>
+               <activity>
+					 <id>3</id>
+					 <displayName>Code typen</displayName>
+					 <type>Programmed</type>
+					 <date start="2/13/2011 08:00:09" end="2/13/2011 09:00:09" />
+					 <lastUpdate>02 Jul 2010 13:43:56</lastUpdate>
+                </activity>
+                  <activity>
+					 <id>8</id>
+					 <displayName>Voetbal kijken</displayName>
+					 <type>Free</type>
+					 <date start="2/14/2011 12:00:09" end="2/14/2011 14:10:09" />
+					 <lastUpdate>01 Jul 2010 14:29:18</lastUpdate>
+                </activity>
+              </activities>
+         </resource>
+        <resource>
+             <id>3</id>
+			 <displayName>Ilian</displayName>
+           <activities>
+              <activity>
+                     <id>4</id>
+					 <displayName>Slapen</displayName>
+					 <type>Free</type>
+					 <date start="2/19/2011 14:30:09" end="2/19/2011 15:30:09" />
+					 <lastUpdate>02 Jul 2010 13:43:54</lastUpdate>
+                </activity>
+              </activities>
+         </resource>
+        <resource>
+             <id>4</id>
+			 <displayName>Andrea</displayName>
+           <activities>
+              <activity>
+                     <id>5</id>
+			 		 <displayName>Presentatie maken</displayName>
+					 <type>General</type>
+					 <date start="2/15/2011 08:00:09" end="2/16/2011 10:30:09" />
+					 <lastUpdate>02 Jul 2010 13:43:48</lastUpdate>
+                </activity>
+                  <activity>
+                     <id>9</id>
+					 <displayName>Breien</displayName>
+					 <type>Free</type>
+					 <date start="2/14/2011 14:00:09" end="2/14/2011 15:00:09" />
+					 <lastUpdate>01 Jul 2010 11:45:03</lastUpdate>
+                </activity>
+              </activities>
+         </resource>
+        <resource>
+             <id>5</id>
+			 <displayName>Iris</displayName>
+           <activities>
+              <activity>
+                     <id>6</id>
+					 <displayName>Presentatie maken</displayName>
+					 <type>General</type>
+					 <date start="2/17/2011 09:00:09" end="2/18/2011 10:00:09" />
+					 <lastUpdate>02 Jul 2010 13:43:50</lastUpdate>
+                </activity>
+                  <activity>
+                     <id>7</id>
+					 <displayName>Breien</displayName>
+					 <type>Free</type>
+					 <date start="2/15/2011 09:00:09" end="2/15/2011 10:00:09" />
+					 <lastUpdate>10 Jul 2010 15:29:32</lastUpdate>
+                </activity>
+              </activities>
+         </resource>
+		 <resource>
+			 <id>6</id>
+			 <displayName>Kushal</displayName>
+           <activities>
+              <activity>
+				     <id>11</id>
+					 <displayName>Project manager</displayName>
+					 <type>Runaway</type>
+					 <date start="2/17/2011 08:00:09" end="2/17/2011 09:00:09" />
+					 <lastUpdate>01 Jul 2010 10:52:34</lastUpdate>
+                </activity>
+                  <activity>
+					 <id>12</id>
+					 <displayName>Lunchen</displayName>
+					 <type>Free</type>
+					 <date start="2/16/2011 08:00:09" end="2/16/2011 09:00:09" />
+					 <lastUpdate>01 Jul 2010 14:34:40</lastUpdate>
+                </activity>
+                  <activity>
+					 <id>13</id>
+					 <displayName>Voetbal kijken</displayName>
+					 <type>Free</type>
+					 <date start="2/14/2011 08:00:09" end="2/14/2011 09:00:09" />
+					 <lastUpdate>01 Jul 2010 14:29:16</lastUpdate>
+                </activity>
+              </activities>
+         </resource>
+		 <resource>
+			 <id>7</id>
+			 <displayName>Bijesh</displayName>
+           <activities>
+              <activity>
+				     <id>14</id>
+					 <displayName>Project manager</displayName>
+					 <type>Runaway</type>
+					 <date start="2/13/2011 08:00:09" end="2/13/2011 09:00:09" />
+					 <lastUpdate>01 Jul 2010 10:52:34</lastUpdate>
+                </activity>
+                  <activity>
+					 <id>15</id>
+					 <displayName>Lunchen</displayName>
+					 <type>Runaway</type>
+					 <date start="2/13/2011 09:00:09" end="2/13/2011 10:00:09" />
+					 <lastUpdate>01 Jul 2010 14:34:40</lastUpdate>
+                </activity>
+			</activities>
+         </resource>
+		 <resource>
+			 <id>8</id>
+			 <displayName>Srikanth</displayName>
+           <activities>
+              <activity>
+				     <id>16</id>
+					 <displayName>Project manager</displayName>
+					 <type>Runaway</type>
+					 <date start="2/17/2011 08:00:09" end="2/17/2011 09:00:09" />
+					 <lastUpdate>01 Jul 2010 10:52:34</lastUpdate>
+                </activity>
+                  <activity>
+					 <id>17</id>
+					 <displayName>Lunchen</displayName>
+					 <type>Free</type>
+					 <date start="2/17/2011 16:00:09" end="2/17/2011 17:00:09" />
+					 <lastUpdate>01 Jul 2010 14:34:40</lastUpdate>
+                </activity>
+                  <activity>
+					 <id>18</id>
+					 <displayName>Voetbal kijken</displayName>
+					 <type>General</type>
+					 <date start="2/17/2011 18:00:09" end="2/17/2011 19:00:09" />
+					 <lastUpdate>01 Jul 2010 14:29:16</lastUpdate>
+                </activity>
+              </activities>
+         </resource>
+		 <resource>
+			 <id>9</id>
+			 <displayName>Darshan</displayName>
+           <activities>
+              <activity>
+				     <id>19</id>
+					 <displayName>Project manager</displayName>
+					 <type>Runaway</type>
+					 <date start="2/16/2011 08:20:09" end="2/16/2011 08:50:09" />
+					 <lastUpdate>01 Jul 2010 10:52:34</lastUpdate>
+                </activity>
+                  <activity>
+					 <id>20</id>
+					 <displayName>Lunchen</displayName>
+					 <type>Free</type>
+					 <date start="2/16/2011 11:20:09" end="2/16/2011 12:20:09" />
+					 <lastUpdate>01 Jul 2010 14:34:40</lastUpdate>
+                </activity>
+                  <activity>
+					 <id>21</id>
+					 <displayName>Voetbal kijken</displayName>
+					 <type>Free</type>
+					 <date start="2/16/2011 15:00:09" end="2/16/2011 16:00:09" />
+					 <lastUpdate>01 Jul 2010 14:29:16</lastUpdate>
+                </activity>
+              </activities>
+         </resource>
+		 <resource>
+			 <id>10</id>
+			 <displayName>Jophin</displayName>
+           <activities>
+              <activity>
+				     <id>22</id>
+					 <displayName>Project manager</displayName>
+					 <type>General</type>
+					 <date start="2/15/2011 08:20:09" end="2/15/2011 09:00:09" />
+					 <lastUpdate>01 Jul 2010 10:52:34</lastUpdate>
+                </activity>
+                  <activity>
+					 <id>23</id>
+					 <displayName>Lunchen</displayName>
+					 <type>General</type>
+					 <date start="2/15/2011 10:00:09" end="2/15/2011 10:30:09" />
+					 <lastUpdate>01 Jul 2010 14:34:40</lastUpdate>
+                </activity>
+              </activities>
+         </resource>
+       </resources>
+    </scheduler>

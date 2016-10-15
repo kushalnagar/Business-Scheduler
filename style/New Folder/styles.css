@@ -1,0 +1,203 @@
+#scheduler {
+	font: 		11px Verdana, Helvetica, sans-serif;
+	background: #fff;
+	width: 		1300px;
+	border: 	1px solid #ccc;
+		
+}
+#scheduler  table {
+	width: 		1300px;
+}
+div.datetime_container {
+	overflow:	hidden;
+	width:		1200px;
+	height:		50px;
+	position: relative;
+}
+
+div.datetime_container .date_inner{
+	text-align:	center;
+	height:		27px;
+	padding-top: 3px;
+}
+div.datetime_container .date_inner button {
+	border: 1px solid #ccc;
+	padding: 2px 5px 2px 5px;
+	margin-left: 5px;
+}
+div.datetime_container .date_inner span{
+	padding:	10px;
+	font-weight: bold;
+}
+
+div.datetime_container .time_inner {
+width:		1200px;
+height:		20px;
+position:	relative;
+left:		0px;
+background:	url('../img/background4.gif');
+}
+
+div.datetime_container .timediv {
+display:	block; 
+float:		left;
+width:		77px;
+height:		20px;
+padding-left: 3px;
+}
+
+div.datetime_container .timediv_week{
+display:	block; 
+float:		left;
+width:		168px;
+height:		20px;
+padding-left: 3px;
+text-align:center;
+}
+
+
+
+div.resource_title {
+height:			20px ;
+padding-top: 	30px;
+padding-left: 	5px;
+font: 			12px Arial;
+}
+
+div.resource_container {
+overflow:	hidden;
+width: 		86px;
+height:		90%;
+padding-left:4px;
+}
+
+div.resource_inner {
+display: 	block; 
+position:	relative;
+width: 		85px;
+border-top:	1px solid #aaa;
+}
+
+.resource_container .resource_inner div {
+background:		#eee;
+width: 			73px; 
+height: 		52px; 
+line-height:	30px ;
+border-left:	1px solid #ccc;
+border-right:	1px solid #aaa;
+border-bottom:	1px solid #ccc;
+padding-left:	10px;
+overflow:		hidden;
+white-space:	nowrap;
+}
+
+div.activities_container {
+overflow:	auto; 
+position:	relative;
+width:		1210px; 
+height:		90%; 
+border-top:	1px solid #999; 
+clear:		both;
+
+}
+
+div.activities_inner {
+position:	relative; 
+width: 		1200px; 
+}
+
+div.activities_resource {
+position:		relative; 
+width: 			1200px; 
+height: 		30px; 
+line-height:	30px;
+border-bottom:	1px solid #ccc;
+background: 	url('../img/background3.gif'); 
+} 
+
+div.activities_resource_week{
+position:		relative; 
+width: 			1197px; 
+height: 		52px; 
+border-bottom:	1px solid #DCDCDC;
+background: 	url('../img/background.gif'); 
+} 
+
+div.activity_week {
+cursor:			pointer;
+height: 		16px;
+text-align: 	center;
+line-height:	10px ;
+font-weight:	bold;
+position:		absolute;
+z-index:		100;
+white-space: 	nowrap;
+
+}
+
+div.activity {
+cursor:			pointer;
+height: 		30px;
+text-align: 	center;
+line-height:	30px ;
+font-weight:	bold;
+position:		absolute;
+z-index:		100;
+white-space: 	nowrap;
+
+}
+
+div.activity_week span {
+	background:		#668cd9;
+	display: block;
+	padding-left: 2px;
+	padding-right: 2px;
+	border: 1px solid #969696;
+	-webkit-border-radius: 4px; 
+	-moz-border-radius: 4px;
+	overflow: 		hidden;
+	vertical-align: middle;
+	height: 16px;
+}
+div.activity span {
+	background:		#668cd9;
+	display: block;
+	padding-left: 2px;
+	padding-right: 2px;
+	border: 1px solid #969696;
+	-webkit-border-radius: 4px; 
+	-moz-border-radius: 4px;
+	overflow: 		hidden;
+	vertical-align: middle;
+	height: 26px;
+}
+
+div.activity.dragging {
+z-index: 101;
+}
+
+
+
+div.resizer{
+cursor: e-resize;
+position: absolute;
+width: 4px;
+height: 30px;
+top : 0px;
+z-index: 101;
+}
+
+div.resizer.dragging{
+z-index: 101;
+}
+
+
+
+div.activities_resource.resizing {
+cursor :  e-resize;
+}
+
+div.activities_container.dragging {
+cursor :  pointer;
+}
+

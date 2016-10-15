@@ -1,0 +1,253 @@
+<html><head>
+
+
+<meta content="text/html; charset=iso-8859-15" http-equiv="Content-Type"> 
+<title>Scheduler</title>
+<script src="js/library.js"></script>
+<script src="js/code.js"></script>
+<script type="text/javascript">
+
+
+function changeLink()
+{
+   var style=window.location.search
+   if(style=='?style=old')
+   {
+   var newLink=document.getElementsByTagName('link')[0]
+   newLink.href="style/styles_bck.css"
+   }
+   else
+   {
+   var newLink=document.getElementsByTagName('link')[0]
+   newLink.href="style/styles.css"
+   
+   }
+} 
+</script>
+
+<link type="text/css" rel="stylesheet" href="style/styles.css">
+<link type="text/css" rel="stylesheet" href="style/custom.css">
+
+</head><body onload="changeLink()">
+
+<div id="popup">
+	<div id="popup_message" class="message">
+	 &nbsp;
+	</div>
+	<div class="mask">
+	</div>
+</div>
+
+<div id="container">
+	<div id="header">
+		<h2>VG Scheduler</h2><p><a href="?lang=nl">NL</a>, <a href="?style=old">OLD</a></p>
+	</div>
+	<div id="messages" class="success">Geladen.</div>
+	<div id="myScheduler"><div id="scheduler"><table cellspacing="0" cellpadding="0" border="0"><tbody><tr><td style="width: 90px;"><div class="resource_title">Gebruikers</div><div class="resource_container" id="resources"><div class="resource_inner" id="resource_inner"><div>Kevin</div><div>Robin</div><div>Ilian</div><div>Andrea</div><div>Iris</div><div>Kushal</div></div></div></td><td style="width: 710px;"><div id="datetime" class="datetime_container"><div class="date_inner"><button>Vandaag</button><button>&lt;&lt;</button><span>22/6/2010</span><button>&gt;&gt;</button></div><div class="time_inner" id="times"><div class="timediv">8:00</div><div class="timediv">9:00</div><div class="timediv">10:00</div><div class="timediv">11:00</div><div class="timediv">12:00</div><div class="timediv">13:00</div><div class="timediv">14:00</div><div class="timediv">15:00</div><div class="timediv">16:00</div><div class="timediv">17:00</div><div class="timediv">18:00</div><div class="timediv">19:00</div><div class="timediv">20:00</div><div class="timediv">21:00</div><div class="timediv">22:00</div></div></div><div id="activities_container" class="activities_container"><div id="activities" class="activities_inner"><div id="1" class="activities_resource"><div class="activity" id="activity_1" style="left: 400px; width: 239px;"><span style="background-color: rgb(46, 154, 254);">Project managen</span></div><div class="activity" id="activity_2" style="left: 680px; width: 79px;"><span style="background-color: rgb(0, 255, 0);">Lunchen</span></div><div class="activity" id="activity_10" style="left: 840px; width: 239px;"><span style="background-color: rgb(0, 255, 0);">Voetbal kijken</span></div></div><div id="2" class="activities_resource"><div class="activity" id="activity_3" style="left: 320px; width: 319px;"><span style="background-color: rgb(250, 172, 88);">Code typen</span></div><div class="activity" id="activity_8" style="left: 920px; width: 239px;"><span style="background-color: rgb(0, 255, 0);">Voetbal kijken</span></div></div><div id="3" class="activities_resource"><div class="activity" id="activity_4" style="left: 680px; width: 239px;"><span style="background-color: rgb(0, 255, 0);">Slapen</span></div></div><div id="4" class="activities_resource"><div class="activity" id="activity_5" style="left: 600px; width: 319px;"><span style="background-color: rgb(255, 128, 0);">Presentatie maken</span></div><div class="activity" id="activity_9" style="left: 1160px;"><span style="background-color: rgb(0, 255, 0);">Breien</span></div></div><div id="5" class="activities_resource"><div class="activity" id="activity_6" style="left: 520px; width: 319px;"><span style="background-color: rgb(255, 128, 0);">Presentatie maken</span></div><div class="activity" id="activity_7" style="left: 1160px;"><span style="background-color: rgb(0, 255, 0);">Breien</span></div></div><div id="6" class="activities_resource"><div class="activity" id="activity_11" style="left: 177px; width: 253px;"><span style="background-color: rgb(46, 154, 254);">Project managen</span></div><div class="activity" id="activity_12" style="left: 440px; width: 79px;"><span style="background-color: rgb(0, 255, 0);">Lunchen</span><span style="top:0px; left: 80px; width:10px;background-color:red"/></div><div class="activity" id="activity_13" style="left: 840px; width: 79px;"><span style="background-color: rgb(0, 255, 0);">Voetbal kijken</span></div></div></div></div></td></tr></tbody></table></div></div>
+</div>
+
+<script type="text/javascript">
+
+GiPCordys.Utils.Element.extend(document.getElementById("messages"));
+var style=window.location.search
+if(style=='?lang=nl'||style!='?style=old')
+{
+var conf = {
+	colors: {
+		'activitytype1': '#ccc',
+		'activitytype2': 'red'
+	},
+    translate: {
+		'Resources': 'Gebruikers',
+		'Today': 'Vandaag',
+		'Tomorrow': 'Morgen',
+		'Yesterday': 'Gisteren',
+		'Earlier': '&lt;&lt;',
+		'Later': '&gt;&gt;'
+	},
+
+	permissions: GiPCordys.scheduler.Permissions.ReadWrite // GiPCordys.scheduler.Permissions.ReadOnly
+};
+}
+else
+{
+var conf = {
+	colors: {
+		'activitytype1': '#ccc',
+		'activitytype2': 'red'
+	},
+	permissions: GiPCordys.scheduler.Permissions.ReadWrite // GiPCordys.scheduler.Permissions.ReadOnly
+};
+
+}
+
+var scheduler = new GiPCordys.scheduler.Scheduler(document.getElementById("myScheduler"), conf);
+
+noreload = false;
+var interval = 1000*60*5;
+var timer = setInterval(function() { if(!noreload) { scheduler.reload() } }, interval);
+
+/*
+ * Define observers
+ */
+
+GiPCordys.scheduler.event.addListener(scheduler, GiPCordys.scheduler.EventTypes.Activity.DragStart, function(data) 
+{
+	noreload = true;
+});
+
+GiPCordys.scheduler.event.addListener(scheduler, GiPCordys.scheduler.EventTypes.Date.Changed, function(data) 
+{
+	document.getElementById("messages").addClass("loading");
+	document.getElementById('messages').innerHTML = "Bezig met laden van de inhoud.";
+	
+	function processActivities(req)
+	{
+		scheduler.clear();
+		
+		document.getElementById("messages").removeClass("loading");
+		document.getElementById("messages").addClass("success");
+		document.getElementById('messages').innerHTML = "Geladen.";
+		
+		var colorList = {};
+		var colors=req.getElementsByTagName("colors")[0];
+		
+		var activityColors = colors.getElementsByTagName('activity');	
+		
+		for (i=0;i&lt;activityColors.length;i++)
+		{
+			activityType = activityColors[i].attributes.getNamedItem("type").value;
+			activityColor = activityColors[i].attributes.getNamedItem("color").value;
+			colorList[activityType] = activityColor;
+		}
+		scheduler.setOptions({colors: colorList});
+		
+		//display each resource
+		var x=req.getElementsByTagName("resource");
+		for (i=0;i&lt;x.length;i++)
+		{
+			empId = x[i].getElementsByTagName("id")[0].childNodes[0].nodeValue;
+			resourceName = x[i].getElementsByTagName("displayName")[0].childNodes[0].nodeValue;
+			
+			var resource = new GiPCordys.scheduler.Resource({
+			'id': empId, 
+			'name': resourceName
+			});
+			
+			scheduler.addResource(resource);
+			
+			//get all activities from this resource from xml
+			var activity=x[i].getElementsByTagName("activity");
+
+			for (y=0;y&lt;activity.length;y++)
+			{
+				activityName = activity[y].getElementsByTagName("displayName")[0].childNodes[0].nodeValue; 
+				activityType = activity[y].getElementsByTagName("type")[0].childNodes[0].nodeValue;
+				activityId   = activity[y].getElementsByTagName("id")[0].childNodes[0].nodeValue;
+				
+				starttime = activity[y].getElementsByTagName("date")[0].attributes.getNamedItem("start").value;
+				endtime = activity[y].getElementsByTagName("date")[0].attributes.getNamedItem("end").value;
+				
+				lastUpdate = activity[y].getElementsByTagName("lastUpdate")[0].childNodes[0].nodeValue; 
+				
+				var activityobj = new GiPCordys.scheduler.Activity({
+					'id': activityId, 
+					'title': activityName,
+					'startdate': new Date(starttime),
+					'enddate': new Date(endtime),
+					'type': activityType,
+					'lastupdate': new Date(lastUpdate)
+				});
+				scheduler.addActivity(resource, activityobj);
+			}
+		}
+	};
+	
+	var soaprequest1 = loadXMLDoc("http://localhost/scedular.xml");
+	processActivities(soaprequest1);
+	
+});
+GiPCordys.scheduler.event.addListener(scheduler, GiPCordys.scheduler.EventTypes.Activity.DragEnd, function(data) 
+{
+    alert(1)
+	noreload = false;
+	var processModifiedAct = function(req)
+	{
+		if(req.responseXML.getElementsByTagName("result")[0].childNodes[0].nodeValue == "success")
+		{
+			 data.activity.setLastUpdate(new Date(req.responseXML.getElementsByTagName("modificationDate")[0].childNodes[0].nodeValue));
+		}
+		else
+		{
+			alert('Fout opgetreden bij het opslaan naar de database');
+		}
+	};
+	
+	var processModifiedDate = function(req)
+	{
+		var modifyDate = new Date(req.responseXML.getElementsByTagName("modificationDate")[0].childNodes[0].nodeValue);
+		
+		if(modifyDate &lt;= data.activity.getLastUpdate())
+		{			
+			var startdate = data.activity.getStartDate();
+			var enddate = data.activity.getEndDate();
+
+			var soaprequest3 = sendSoapData("http://www.dysprostar.com/giphousetest/test.php", "&lt;soapenv:Envelope xmlns:soapenv='http://www.w3.org/2003/05/soap-envelope' xmlns:xsd='http://www.w3.org/2001/XMLSchema' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'&gt;" +
+					"&lt;soapenv:Body&gt;" +
+						"&lt;modifyScheduledItem&gt;" +
+							"&lt;resource&gt;"+
+							"&lt;id&gt;" + data.resource.getId() + "&lt;/id&gt;"+
+								"&lt;activity&gt;"+
+									"&lt;id&gt;" + data.activity.getId() + "&lt;/id&gt;"+
+									"&lt;displayName&gt;" + data.activity.getTitle() + "&lt;/displayName&gt;"+
+									"&lt;type&gt;" + data.activity.getType() + "&lt;/type&gt;"+
+									'&lt;date start="'+data.activity.getStartDate().toGMTString()+'" end="'+data.activity.getEndDate().toGMTString()+'"/&gt;'+
+								"&lt;/activity&gt;"+
+							"&lt;/resource&gt;"+
+						"&lt;/modifyScheduledItem&gt;"+
+					"&lt;/soapenv:Body&gt;" +
+				"&lt;/soapenv:Envelope&gt;", processModifiedAct);	
+		} 
+		else
+		{	
+			document.getElementById("messages").addClass("notification");
+			document.getElementById('messages').innerHTML = "Dit item is gewijzigd door iemand anders, de scheduler wordt herladen.";
+			
+			document.getElementById('popup').style.display = "block";
+			document.getElementById('popup_message').innerHTML = "&lt;p&gt;Dit item is gewijzigd door iemand anders, de scheduler wordt herladen.&lt;/p&gt;";
+			
+			var button = document.createElement('button');
+			button.appendChild(document.createTextNode('Ok, sluit dit venster'));
+			GiPCordys.Utils.Element.extend(button);
+			
+			button.addListener('click', function(e)
+			{
+				document.getElementById('popup').style.display = "none";
+			});
+			
+			document.getElementById('popup_message').appendChild(button);
+			
+			scheduler.reload();
+		}
+	};
+    
+	
+	var soaprequest2 = sendSoapData("http://www.dysprostar.com/giphousetest/test.php", "&lt;soapenv:Envelope xmlns:soapenv='http://www.w3.org/2003/05/soap-envelope' xmlns:xsd='http://www.w3.org/2001/XMLSchema' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'&gt;" +
+						"&lt;soapenv:Body&gt;" +
+							"&lt;retrieveModificationDate&gt;" +
+								"&lt;activityId&gt;" + data.activity.getId() + "&lt;/activityId&gt;" +
+							"&lt;/retrieveModificationDate&gt;" +
+						"&lt;/soapenv:Body&gt;" +
+					"&lt;/soapenv:Envelope&gt;", processModifiedDate
+	);
+}
+);
+GiPCordys.scheduler.event.addListener(scheduler, GiPCordys.scheduler.EventTypes.Scheduler.Exception, function(data) 
+{
+	//alert(data.msg);
+});
+
+scheduler.displayPeriod(2010,6,22);
+
+</script>
+</body></html>

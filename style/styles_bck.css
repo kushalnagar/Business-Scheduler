@@ -1,0 +1,166 @@
+#scheduler {
+	font: 		11px Verdana, Helvetica, sans-serif;
+	background: #eee;
+	width: 		1300px;
+	border: 	2px solid #ccc;
+}
+#scheduler  table {
+	width: 		1300px;
+}
+div.datetime_container {
+	overflow:	hidden;
+	width:		1200px;
+	height:		50px;
+	position: relative
+	
+}
+
+div.datetime_container .date_inner{
+	text-align:	center;
+	height:		27px;
+	padding-top: 3px;
+}
+div.datetime_container .date_inner span{
+	padding:	15px;
+	font-weight: bold;
+}
+
+div.datetime_container .time_inner {
+width:		1200px;
+height:		20px;
+position:	relative;
+left:		0px;
+}
+
+div.datetime_container .timediv {
+display:	block; 
+float:		left;
+width:		80px;
+height:		20px
+}
+
+div.datetime_container .timediv_week{
+display:	block; 
+float:		center;
+width:		171px;
+height:		20px;
+padding-left: 3px;
+}
+
+div.resource_title {
+height:			20px ;
+padding-top: 	30px;
+padding-left: 	5px;
+font: 			12px Verdana;
+}
+
+div.resource_container {
+overflow:	hidden;
+width: 		86px;
+height:		400px;
+padding-left:4px
+}
+
+div.resource_inner {
+display: 	block; 
+position:	relative;
+width: 		86px;
+border-top:	1px solid #000;
+}
+
+.resource_container .resource_inner div {
+width: 			73px; 
+height: 		30px; 
+line-height:	30px ;
+border-left:	1px solid #000;
+border-right:	1px solid #000;
+border-bottom:	1px solid #000;
+padding-left:	10px;
+overflow:		hidden;
+white-space:	nowrap;
+}
+
+
+div.activities_container {
+overflow:	auto; 
+position:	relative;
+width:		1210px; 
+height:		400px; 
+border-top:	1px solid #000; 
+clear:		both;
+
+}
+
+div.activities_inner {
+position:	relative; 
+width: 		1200px; 
+}
+
+div.activities_resource {
+position:		relative; 
+width: 			1200px; 
+height: 		30px; 
+border-bottom:	1px solid #000;
+background: 	url('../img/background2.gif'); 
+} 
+
+div.activities_resource.week{
+position:		relative; 
+width: 			1190px; 
+height: 		30px; 
+border-bottom:	1px solid #000;
+background: 	url('../img/background.gif'); 
+} 
+
+
+div.activity {
+cursor:			pointer;
+height: 		30px;
+text-align: 	center;
+line-height:	30px ;
+font-weight:	bold;
+position:		absolute;
+z-index:		100;
+white-space: 	nowrap;
+
+}
+div.activity span {
+	background:		#668cd9;
+	display: block;
+	padding-left: 2px;
+	padding-right: 2px;
+	border: 1px solid #969696;
+	-webkit-border-radius: 4px; 
+	-moz-border-radius: 4px;
+	overflow: 		hidden;
+	vertical-align: middle;
+	height: 26px;
+}
+div.activity.dragging {
+z-index: 101;
+}
+
+
+div.resizer{
+cursor: e-resize;
+position: absolute;
+width: 4px;
+height: 30px;
+top : 0px;
+z-index: 101;
+}
+
+
+div.resizer.dragging{
+z-index: 101;
+}
+
+
+div.activities_resource.resizing {
+cursor :  e-resize;
+}
+
+div.activities_container.dragging {
+cursor :  pointer;
+}
+

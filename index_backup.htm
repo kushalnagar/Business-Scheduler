@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<title>Scheduler</title>
+<script src="js/library.js"></script>
+<script src="js/code.js"></script>
+<link href="style/styles.css" rel="stylesheet" type="text/css" /> 
+<link href="style/custom.css" rel="stylesheet" type="text/css" /> 
+</head>
+<body>
+
+<div id="container">
+	<div id="messages">
+	</div>
+	<div id="myScheduler">
+		<!-- this is where the scheduler will be placed-->
+	</div>
+</div>
+
+<script type="text/javascript">
+var conf = {
+	colors: {
+		'activitytype1': '#ccc',
+		'activitytype2': 'red'
+	},
+	permissions: GiPCordys.scheduler.Permissions.ReadWrite
+};
+
+var scheduler = new GiPCordys.scheduler.Scheduler(document.getElementById("myScheduler"), conf);
+
+/*
+ * Define observers
+ */
+
+/*
+ * onDrag, DragEnd observers
+ * data = {activity}
+ */
+GiPCordys.scheduler.event.addListener(scheduler, GiPCordys.scheduler.EventTypes.Activity.onDrag, function(data) 
+{
+});
+GiPCordys.scheduler.event.addListener(scheduler, GiPCordys.scheduler.EventTypes.Activity.DragEnd, function(data) 
+{
+});
+/*
+ * data = {msg}
+ */
+GiPCordys.scheduler.event.addListener(scheduler, GiPCordys.scheduler.EventTypes.Scheduler.Exception, function(data) 
+{
+	//data.msg
+});
+
+GiPCordys.scheduler.event.addListener(scheduler, GiPCordys.scheduler.EventTypes.Date.Changed, function(data) 
+{
+	scheduler.clear();
+	/*
+	 * add resources and activities
+	 */
+	var resource = new GiPCordys.scheduler.Resource({
+		'id': 1, 
+		'name': 'Kevin Verpoort'
+	});
+	var activity = new GiPCordys.scheduler.Activity({
+		'id': 1, 
+		'title': 'Broodjes regelen',
+		'startdate': new Date('25 May 2010 13:00:00 GMT+0200'),
+		'enddate': new Date('25 May 2010 14:00:00 GMT+0200')
+		}
+	);
+	var activity2 = new GiPCordys.scheduler.Activity({
+		'id': 2, 
+		'title': 'Tijdschema verzinnen',
+		'startdate': new Date('25 May 2010 09:00:00 GMT+0200'),
+		'enddate': new Date('25 May 2010 12:00:00 GMT+0200')
+	});
+	var activity3 = new GiPCordys.scheduler.Activity({
+		'id': 3, 
+		'title': 'bla',
+		'startdate': new Date('25 May 2010 10:00:00 GMT+0200'),
+		'enddate': new Date('25 May 2010 12:00:00 GMT+0200')
+	});
+	var activity4 = new GiPCordys.scheduler.Activity({
+		'id': 4, 
+		'title': 'Slapen...',
+		'startdate': new Date('25 May 2010 09:00:00 GMT+0200'),
+		'enddate': new Date('25 May 2010 15:00:00 GMT+0200')
+	});
+	var resource2 = new GiPCordys.scheduler.Resource({
+		'id': 2, 
+		'name': 'Robin Rutten'
+	});
+	var resource3 = new GiPCordys.scheduler.Resource({
+		'id': 5444, 
+		'name': 'Andrea'
+	});
+	var resource4 = new GiPCordys.scheduler.Resource({
+		'id': 776, 
+		'name': 'Iris'
+	});
+	var resource5 = new GiPCordys.scheduler.Resource({
+		'id': 4222, 
+		'name': 'Andrea'
+	});
+	var resource6 = new GiPCordys.scheduler.Resource({
+		'id': 3243, 
+		'name': 'Henk'
+	});
+	var resource7 = new GiPCordys.scheduler.Resource({
+		'id': 7, 
+		'name': 'Hans'
+	});
+	var resource8 = new GiPCordys.scheduler.Resource({
+		'id': 8, 
+		'name': 'Jan'
+	});
+	var resource9 = new GiPCordys.scheduler.Resource({
+		'id': 9, 
+		'name': 'Piet'
+	});
+	var resource10 = new GiPCordys.scheduler.Resource({
+		'id': 10, 
+		'name': 'Klaas'
+	});
+	var resource11 = new GiPCordys.scheduler.Resource({
+		'id': 11, 
+		'name': 'Frits'
+	});
+	var resource12 = new GiPCordys.scheduler.Resource({
+		'id': 12, 
+		'name': 'Pieter'
+	});
+	var resource13 = new GiPCordys.scheduler.Resource({
+		'id': 13, 
+		'name': 'Erik'
+	});
+	var resource14 = new GiPCordys.scheduler.Resource({
+		'id': 14, 
+		'name': 'Diederik'
+	});
+	var resource15 = new GiPCordys.scheduler.Resource({
+		'id': 15, 
+		'name': 'Ilian van der Velden'
+	});
+
+	scheduler.addActivity(resource, activity);
+	scheduler.addActivity(resource, activity2);
+	scheduler.addResource(resource2);
+	scheduler.addResource(resource3);
+	scheduler.addResource(resource4);
+	
+	scheduler.addResource(resource5);
+	scheduler.addActivity(resource5, activity3);
+	
+	scheduler.addResource(resource6);
+	scheduler.addResource(resource7);
+	scheduler.addResource(resource8);
+	scheduler.addResource(resource9);
+	scheduler.addResource(resource10);
+	scheduler.addResource(resource11);
+	scheduler.addResource(resource12);
+	scheduler.addResource(resource13);
+	scheduler.addResource(resource14);
+	scheduler.addResource(resource15);
+	
+	scheduler.addActivity(resource15, activity4);
+});
+GiPCordys.scheduler.event.addListener(scheduler, GiPCordys.scheduler.EventTypes.Activity.DragEnd, function(data) 
+{
+	
+});
+GiPCordys.scheduler.event.addListener(scheduler, GiPCordys.scheduler.EventTypes.Scheduler.Exception, function(data) 
+{
+	alert(data.msg);
+});
+
+scheduler.displayPeriod(2011,10,13);
+
+</script>
+</body>
+</html>
